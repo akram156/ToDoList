@@ -1,0 +1,131 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glassmorphism Container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+#addBtn {
+  background-color: #ffffff;
+  border: none;
+  padding: 0 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+#addBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-list li button {
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-list li button:hover {
+  background-color: #e63636;
+}
+
+/* Clear Button */
+.clear-btn {
+  margin-top: 15px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
