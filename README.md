@@ -26,3 +26,7 @@ A **beautiful and minimalistic Todo List** built with pure **HTML, CSS, and Java
 1. Download or clone the repo:
    ```bash
    git clone https://github.com/your-username/animated-todo-list.git
+
+
+the url of this project is :
+https://akram156.github.io/ToDoList/
